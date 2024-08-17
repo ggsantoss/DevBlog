@@ -1,0 +1,30 @@
+
+h1, h2, h3 {
+    margin: 0.5em 0;
+    font-size: 25px;
+    color: skyblue;
+  }
+  
+  ul, ol {
+    margin: 0;
+    padding: 0 0 0 1em;
+    color: gray;
+    
+  }
+  
+  li {
+    margin: 0.5em 0;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 1em;
+    margin: 1em 0;
+    font-style: italic;
+  }
+  

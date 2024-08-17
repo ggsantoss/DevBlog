@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Blog</title>
+    <link rel='stylesheet' href='/css/home.css' />
+    <!-- Inclua outras folhas de estilo, se necessário -->
+</head>
+<body>
+
+<main class='container'>
+    <div class='posts'>
+        {{#each data}}
+        <article class='post'>
+            <img src="./img/{{basename this.imagePath}}" class="post-image" alt="Post Image">
+            <div class='post-content'>
+                <h2 class='post-title'><a href='/post/{{this.id}}'>{{this.title}}</a></h2>
+                <div class='post-meta'>
+                    <span class='author'>Crowler</span> |
+                    <span class='date'>{{this.createdAt}}</span>
+                </div>
+                <div id='shortText'>
+                    <!-- Add short text or summary here if needed -->
+                </div>
+                <span class='tag'>{{this.tag}}</span>
+            </div>
+        </article>
+        {{/each}}
+    </div>
+
+    <aside class='sidebar'>
+        <h3>Popular Tags</h3>
+        <ul>
+            <li><a href="#rust">#Rust</a></li>
+            <li><a href="#python">#Python</a></li>
+            <li><a href="#javascript">#JavaScript</a></li>
+            <li><a href="#go">#Go</a></li>
+            <li><a href="#typescript">#TypeScript</a></li>
+        </ul>
+
+        <h3>Latest Tutorials</h3>
+        <ul>
+            <li><a href="#tutorial1">Building a REST API with Go</a></li>
+            <li><a href="#tutorial2">Async Programming in Rust</a></li>
+            <li><a href="#tutorial3">Advanced TypeScript Patterns</a></li>
+            <li><a href="#tutorial4">Python for Data Analysis</a></li>
+        </ul>
+    </aside>
+</main>
+
+    <footer>
+      <div class='container-footer'>
+          <p>&copy; 2023 Blog. All rights reserved.</p>
+          <p>Crafted with ❤️ and ☕ by programmers, for programmers.</p>
+      </div>
+  </footer>
+</body>
+</html>

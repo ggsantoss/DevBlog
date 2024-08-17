@@ -1,0 +1,35 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Blog</title>
+    <link rel='stylesheet' href='/css/home.css' />
+    <link rel='stylesheet' href='/css/post.css' />
+  </head>
+  <body>
+
+    <section class='section-container'>
+      <div class='container'>
+        <p>Search for content:</p>
+        <form method='GET' action='/search'>
+          <input type='text' name='q' id='search' placeholder='Search...' />
+          <button type='submit'>Search</button>
+        </form>
+        <h2>Hello, I'm Guilherme.</h2>
+        <p>Hello, my name is Guilherme and this is my personal blog. I'm a
+          programming student and here I will post about programming languages
+          and my opinions. I hope this blog helps you with your studies or
+          career.</p>
+      </div>
+    </section>
+
+    {{#each data}}
+      <section class='post-container'>
+        <section class='post'>
+          <h2><a href='/post/{{this.id}}'>{{this.title}}</a></h2>
+          <p>{{this.createdAt}}</p>
+        </section>
+      </section>
+    {{/each}}
+  </body>
+</html> 

@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+nav {
+  z-index: 99;
+  width: 100%;
+  background: #333; 
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+nav .wrapper {
+  position: relative;
+  max-width: 1200px;
+  padding: 0 20px;
+  height: 80px;
+  line-height: 80px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wrapper .logo a {
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.wrapper .nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links li {
+  list-style: none;
+  position: relative; 
+}
+.nav-links li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.nav-links li a:hover {
+  background: #444;
+  color: #fff;
+}
+.nav-links .mobile-item {
+  display: none;
+}
+.nav-links .drop-menu {
+  position: absolute;
+  background: #333;
+  width: 200px;
+  line-height: 45px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.nav-links li:hover .drop-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.drop-menu li a {
+  padding: 10px 15px;
+  font-weight: 400;
+}
+.drop-menu li a:hover {
+  background: #555;
+}
+.wrapper .btn {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+.wrapper .btn.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+@media screen and (max-width: 970px) {
+  .wrapper .btn {
+    display: block;
+  }
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    left: -100%;
+    background: #333;
+    padding: 60px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+  }
+  #menu-btn:checked ~ .nav-links {
+    left: 0;
+  }
+  #menu-btn:checked ~ .btn.menu-btn {
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn {
+    display: block;
+  }
+  .nav-links li {
+    margin: 20px 0;
+  }
+  .nav-links li a {
+    padding: 15px;
+    font-size: 22px;
+  }
+  .nav-links .drop-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: none;
+  }
+  #showDrop:checked ~ .drop-menu {
+    max-height: 300px;
+  }
+  .nav-links .desktop-item {
+    display: none;
+  }
+  .nav-links .mobile-item {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  .nav-links .mobile-item:hover {
+    background: #444;
+  }
+  .drop-menu li a {
+    font-size: 20px;
+    border-radius: 8px;
+  }
+}
+nav input {
+  display: none;
+}
+
+.body-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+.body-text div {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+}
+
+@media screen and (max-width: 970px) {
+  .wrapper .btn {
+    display: block;
+  }
+  .wrapper .nav-links {
+    position: fixed;
+    height: 100vh;
+    width: 250px;
+    top: 0;
+    left: -100%;
+    background: #333;
+    padding: 60px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+  }
+  #menu-btn:checked ~ .nav-links {
+    left: 0;
+  }
+  #menu-btn:checked ~ .btn.menu-btn {
+    display: none;
+  }
+  #close-btn:checked ~ .btn.menu-btn {
+    display: block;
+  }
+  .nav-links li {
+    margin: 20px 0;
+  }
+  .nav-links li a {
+    padding: 15px;
+    font-size: 22px;
+  }
+  .nav-links .drop-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: none;
+  }
+  #showDrop:checked ~ .drop-menu {
+    max-height: 300px;
+  }
+  .nav-links .desktop-item {
+    display: none;
+  }
+  .nav-links .mobile-item {
+    display: block;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 500;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  .nav-links .mobile-item:hover {
+    background: #444;
+  }
+  .drop-menu li a {
+    font-size: 20px;
+    border-radius: 8px;
+  }
+  nav {
+    display: none;
+  }
+}
+nav input {
+  display: none;
+}
+
+.body-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  padding: 0 20px;
+}
+.body-text div {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff; 
+}

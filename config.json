@@ -1,0 +1,5 @@
+{
+  "JWT_SECRET": "secret",
+  "PORT": "8000",
+  "SECRET_KEY": "ZXVhbW9tdWl0b3RvbWFyY2Fmw6k="
+}

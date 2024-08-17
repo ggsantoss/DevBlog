@@ -1,0 +1,44 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='/css/admin.css' />
+    <title>Blog - Admin</title>
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css'
+    />
+    <script
+      src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'
+      referrerpolicy='origin'
+    ></script>
+  </head>
+  <body>
+    <div class='container'>
+      <div class='main-content'>
+        <h1>Criar uma Nova Postagem</h1>
+
+        <form class='form-main' action='/create' method='POST' enctype="multipart/form-data">
+          <label for='title'>Título:</label>
+          <input class='item' name='title' type='text' required />
+
+          <label for='content'>Conteúdo:</label>
+          <textarea name='content' id='mytextarea' required></textarea>
+
+          <label for='banner'>Foto do Banner:</label>
+          <input class='item' type='file' name='imagePath' accept='image/*' required />
+
+          <label for='content'>Tags:</label>
+          <textarea name='tag' id='mytextarea' required></textarea>
+
+          <button type='submit'>Criar Postagem</button>
+        </form>
+        <div class='post'>
+          <h2>Título da Postagem</h2>
+          <p>Conteúdo da postagem vai aqui...</p>
+          <img src='caminho_para_a_imagem.jpg' alt='Descrição da Imagem' />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

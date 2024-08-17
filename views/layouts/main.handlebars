@@ -1,0 +1,39 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='/css/nav.css' />
+    <link rel='stylesheet' href='/css/style.css' />
+    <link rel="stylesheet" href="/css/footer.css">
+    <title>Blog</title>
+  </head>
+  <body>
+    <nav>
+      <div class='wrapper'>
+        <div class='logo'><a href='#'>BlogDev</a></div>
+        <input type='radio' name='slider' id='menu-btn' />
+        <input type='radio' name='slider' id='close-btn' />
+        <ul class='nav-links'>
+          <label for='close-btn' class='btn close-btn'><i
+              class='fas fa-times'
+            ></i></label>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/blog'>Posts</a></li>
+          <li>
+            <a href='#' class='desktop-item'>Contacts</a>
+            <input type='checkbox' id='showDrop' />
+            <label for='showDrop' class='mobile-item'>Contacts</label>
+            <ul class='drop-menu'>
+              <li><a href='https://discord.gg/RexXaNzqgP'>Discord</a></li>
+              <li><a href='https://github.com/SrCrow02'>Github</a></li>
+            </ul>
+          </li>
+        </ul>
+        <label for='menu-btn' class='btn menu-btn'><i
+            class='fas fa-bars'
+          ></i></label>
+      </div>
+    </nav>
+    {{{body}}}
+  </body>
+</html>
