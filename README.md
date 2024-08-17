@@ -24,3 +24,5 @@ Antes de começar, você precisará ter o [Node.js](https://nodejs.org/) instala
 
    ```bash
    ./build.sh
+
+![image](https://github.com/user-attachments/assets/1fe6c7bf-133d-4d1d-abb9-41d79bac7cd9)
