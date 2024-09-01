@@ -10,7 +10,6 @@ import { engine } from 'express-handlebars';
 import { router } from './routes/postRouter';
 
 import swaggerUI from 'swagger-ui-express';
-import swaggerSpec from '../schemas.json';
 import { routerUser } from './routes/userRouter';
 
 const app = express();
@@ -38,8 +37,6 @@ const limiter = rateLimit({
 app.use(express.static('public'));
 
 app.use(limiter);
-
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerSpec));
 
 app.use(Logger.log);
 app.use(express.urlencoded({ extended: true }));

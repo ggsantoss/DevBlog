@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./",
+    "paths": {
+      "*": ["node_modules/*"]
+    },
+    "resolveJsonModule": true,      // Permite a importação de arquivos JSON
+    "isolatedModules": true         // Facilita a integração com ferramentas de compilação
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.json"               // Inclui arquivos JSON para serem considerados na compilação.
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
