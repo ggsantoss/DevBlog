@@ -18,7 +18,7 @@ Antes de começar, você precisará ter o [Node.js](https://nodejs.org/) instala
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/SrCrow02/DevBlog.git
+   git clone https://github.com/ggsantoss/DevBlog.git
 
 2. Verifique e use o arquivo build.sh:
 
